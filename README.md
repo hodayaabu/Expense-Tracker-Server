@@ -67,6 +67,7 @@ Password: h123
 
 **Code and Architecture**
 <br>
+<br>
 **Frontend**
 <br>
 Framework: React.js
@@ -77,6 +78,8 @@ UI Components: SASS
 <br>
 The frontend is a React application that interacts with the backend through API calls. It has components for user authentication, expense management, and data visualization.
 <br>
+<br>
+
 **Server**
 <br>
 Framework: Node.js with Express.js
@@ -87,8 +90,11 @@ Authentication: JWT
 <br>
 The server handles user authentication, expense data management, and provides a RESTful API for the frontend to interact with.
 <br>
-**API Endpoints**
 <br>
+
+**API Endpoints**
+<br> <br>
+
 **Authentication**<br>
 POST /api/auth/register: Register a new user
 <br>
