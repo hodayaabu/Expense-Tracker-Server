@@ -7,6 +7,7 @@ const collectionName = "users";
 export const userService = {
   getById,
   add,
+  getByUsername
 };
 
 
@@ -30,7 +31,13 @@ async function add(userToAdd) {
     await collection.insertOne(userToAdd);
     return userToAdd;
   } catch (err) {
-    logger.error("UserService[add] : " + err);
     throw err;
   }
 }
+
+async function getByUsername(username) {
+  const collection = await dbService.getCollection(collectionName);
+  const user = collection.findOne({ username });
+  return user;
+}
+
