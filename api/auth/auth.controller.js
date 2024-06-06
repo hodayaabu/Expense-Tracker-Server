@@ -23,7 +23,6 @@ export async function signup(req, res) {
       credentials.username,
       credentials.password
     );
-    console.log(user);
     const loginToken = authService.getLoginToken(user);
     res.cookie("loginToken", loginToken, { sameSite: "None", secure: true });
 
