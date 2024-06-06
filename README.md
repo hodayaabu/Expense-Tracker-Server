@@ -62,44 +62,62 @@ Username: hodi
 <br>
 
 Password: h123
-<br/>
+<br>
 
 
 **Code and Architecture**
+<br>
 **Frontend**
+<br>
 Framework: React.js
+<br>
 State Management: Redux
+<br>
 UI Components: SASS
+<br>
 The frontend is a React application that interacts with the backend through API calls. It has components for user authentication, expense management, and data visualization.
-<br/>
+<br>
 **Server**
+<br>
 Framework: Node.js with Express.js
+<br>
 Database: MongoDB 
+<br>
 Authentication: JWT 
+<br>
 The server handles user authentication, expense data management, and provides a RESTful API for the frontend to interact with.
-<br/>
+<br>
 **API Endpoints**
-
-**Authentication**
+<br>
+**Authentication**<br>
 POST /api/auth/register: Register a new user
+<br>
 Request: { "username": "string", "password": "string" }
-<br/>
+<br>
 POST /api/auth/login: Log in an existing user
+<br>
 Request: { "username": "string", "password": "string" }
+<br>
 Response: { "token": "jwt-token" }
-<br/>
+<br>
+<br>
 
 **Expenses**
-GET /api/expenses: Get all expenses for the logged-in user
+<br>
+GET /api/expenses: Get all expenses for the logged-in user <br>
+
 Response: [{ "id": "string", "amount": "number", "category": "string", "date": "date","note":"string" }]
-<br/>
-POST /api/expenses: Add a new expense
+<br>
+POST /api/expenses: Add a new expense <br>
 Request: { "amount": "number", "category": "string", "note":"string" }
 <br/>
-PUT /api/expenses/:id Update an existing expense
+PUT /api/expenses/:id Update an existing expense <br>
 Request: { "amount": "number", "category": "string", "note":"string" }
-<br/>
-DELETE /api/expenses/:id Delete an expense
+<br>
+DELETE /api/expenses/:id Delete an expense <br>
 Response: { "message": "Expense deleted successfully" }
+<br>
+
+<br>
 
 **Have Fun!**
