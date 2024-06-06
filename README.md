@@ -100,11 +100,11 @@ POST /api/auth/register: Register a new user
 <br>
 Request: { "username": "string", "password": "string" }
 <br>
+<br>
+
 POST /api/auth/login: Log in an existing user
 <br>
 Request: { "username": "string", "password": "string" }
-<br>
-Response: { "token": "jwt-token" }
 <br>
 <br>
 
@@ -114,12 +114,18 @@ GET /api/expenses: Get all expenses for the logged-in user <br>
 
 Response: [{ "id": "string", "amount": "number", "category": "string", "date": "date","note":"string" }]
 <br>
+<br>
+
 POST /api/expenses: Add a new expense <br>
 Request: { "amount": "number", "category": "string", "note":"string" }
 <br/>
+<br>
+
 PUT /api/expenses/:id Update an existing expense <br>
 Request: { "amount": "number", "category": "string", "note":"string" }
 <br>
+<br>
+
 DELETE /api/expenses/:id Delete an expense <br>
 Response: { "message": "Expense deleted successfully" }
 <br>
