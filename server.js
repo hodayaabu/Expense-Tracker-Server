@@ -27,7 +27,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(cors(corsOptions));
 }
 
-
 app.use(express.json());
 app.use(cookieParser());
 
@@ -41,10 +40,7 @@ app.get("/**", (req, res) => {
   res.sendFile(path.resolve("public/index.html"));
 });
 
-
-
 // Listening port
 server.listen(PORT, () => {
-
   console.log("Server is running on port: " + PORT);
 });
