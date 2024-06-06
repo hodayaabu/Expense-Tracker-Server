@@ -4,7 +4,7 @@ import { expenseService } from "./expense.service.js";
 // lIST
 export async function getExpenses(req, res) {
   try {
-    const expenses = await expenseService.query();
+    const expenses = await expenseService.query(req.loggedinUser._id);
     res.send(expenses);
   } catch (err) {
     res.status(400).send({ err: "Failed to get expenses" });
@@ -19,7 +19,8 @@ export async function addExpense(req, res) {
     amount,
     note,
     category,
-    date: Date.now()
+    date: Date.now(),
+    creator: req.loggedinUser._id
   };
 
   try {

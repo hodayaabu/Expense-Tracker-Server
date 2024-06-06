@@ -9,15 +9,13 @@ export const expenseService = {
 };
 
 const collectionName = "expenseDB";
-const allowedFields = ["amount", "category", "note"];
 
 // lIST
-async function query() {
+async function query(creator) {
   try {
-    //   const criteria = _buildCriteria(filterBy);
-    //   const bugCursor = await collection.find(criteria);
+
     const collection = await dbService.getCollection(collectionName);
-    const expenses = await collection.find().toArray();
+    const expenses = await collection.find({ creator }).toArray();
 
     return expenses;
   } catch (err) {
