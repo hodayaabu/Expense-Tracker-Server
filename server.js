@@ -5,6 +5,7 @@ import path from "path";
 import cookieParser from "cookie-parser";
 
 import { expenseRoutes } from "./api/expense/expense.routes.js";
+import { userRoutes } from "./api/user/user.routes.js";
 
 const app = express();
 const server = http.createServer(app);
@@ -31,6 +32,7 @@ app.use(cookieParser());
 
 // Routes
 app.use("/api/expense", expenseRoutes);
+app.use("/api/user", userRoutes);
 
 // Fallback route
 app.get("/**", (req, res) => {
