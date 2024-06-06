@@ -32,27 +32,22 @@ Follow these steps to set up the project on your local machine:
 
 1. Clone both the frontend and server repositories.
 (Expense-Tracker-Server & Expense-Tracker)
-<br>
 
 git clone <Expense-Tracker-Server>
 git clone <Expense-Tracker>
 <br>
 
-2. Install Dependencies
+3. Install Dependencies
 Open the frontend and server directories in Visual Studio Code (VSC) and run the following commands:
-<br>
 
 cd Expense-Tracker
 npm install
-<br>
 
 cd Expense-Tracker-Server
 npm install
-<br>
 
 3. Run the Development Servers
 In both the frontend and server directories, run the following command to start the development servers:
-<br>
 
 npm run dev
 <br>
@@ -62,7 +57,6 @@ After starting both servers, open your browser
 <br>
 
 5. If you want to log in using an existing user, use the following credentials:
-6. <br>
 
 Username: hodi
 <br>
