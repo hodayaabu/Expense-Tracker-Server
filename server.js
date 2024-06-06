@@ -4,6 +4,8 @@ import cors from "cors";
 import path from "path";
 import cookieParser from "cookie-parser";
 
+import { expenseRoutes } from "./api/expense/expense.routes.js";
+
 const app = express();
 const server = http.createServer(app);
 const PORT = process.env.PORT || 3030;
@@ -27,10 +29,15 @@ if (process.env.NODE_ENV === "production") {
 app.use(express.json());
 app.use(cookieParser());
 
+// Routes
+app.use("/api/expense", expenseRoutes);
+
 // Fallback route
 app.get("/**", (req, res) => {
   res.sendFile(path.resolve("public/index.html"));
 });
+
+
 
 // Listening port
 server.listen(PORT, () => {
