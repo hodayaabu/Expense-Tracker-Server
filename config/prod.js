@@ -1,7 +1,7 @@
 export default {
   dbURL:
     process.env.MONGO_URL ||
-    "mongodb+srv://trelloCrawMongoDb:Gnyv0nFjFOiTM4If@trelloca-cluster.r6rwhb1.mongodb.net",
+    "mongodb+srv://hodayabu:hodaya770@expense.ggwzxbu.mongodb.net/?retryWrites=true&w=majority&appName=expense",
 
-  dbName: process.env.DB_NAME || "TrelloDB",
+  dbName: process.env.DB_NAME || "expense_tracker",
 };
